@@ -4,7 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './global.css';
 //import App from './components/App';
-import BadgeNewPractice from './pages/BadgeNewPractice';
+//import BadgeNewPractice from './pages/BadgeNewPractice';
+//import BadgesPractice from './pages/BadgesPractice';
+
+import AppPractice from './components/AppPractice';
 
 const container = document.getElementById('app');
 
@@ -16,6 +19,7 @@ ReactDOM.render(
     jobTitle="Web developer"
     twitter="@diegodurand6"
 />, */
-<BadgeNewPractice />,
+//<BadgeNewPractice />,
+<AppPractice />,
 container);
  
