@@ -12,8 +12,8 @@ function AppPractice(){
             <LayoutPractice>
                 <Switch>
                     <Route exact path="/" component={HomePractice}/>
-                    <Route exact path="/badges" component={BadgesPractice}/>
-                    <Route exact path="/badges/new" component={BadgeNewPractice}/>
+                    <Route exact path="/badgesPractice" component={BadgesPractice} />
+                    <Route exact path="/badgesPractice/new" component={BadgeNewPractice} />
                     <Route component={NotFoundPractice}/>
                 </Switch>
             </LayoutPractice>

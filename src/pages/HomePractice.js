@@ -19,7 +19,7 @@ export default class HomePractice extends Component {
                     />
 
                     <h1>Badge Management System</h1>
-                    <Link className="btn btn-primary" to="/badges">
+                    <Link className="btn btn-primary" to="/badgesPractice">
                         Start
                     </Link>
                     </div>
