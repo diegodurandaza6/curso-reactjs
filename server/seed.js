@@ -29,7 +29,6 @@ function main() {
   const data = {
     badges: createBadges(),
   };
-
   fs.writeFileSync(
     path.resolve(__dirname, 'db.json'),
     JSON.stringify(data, null, 4)

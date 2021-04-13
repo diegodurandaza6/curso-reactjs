@@ -15,6 +15,7 @@ async function callApi(endpoint, options = {}) {
   };
 
   const url = BASE_URL + endpoint;
+  console.log(url, options);
   const response = await fetch(url, options);
   const data = await response.json();
   return data;
@@ -24,27 +25,27 @@ const api = {
   badges: {
     list() {
       //throw new Error('Not found');
-      return callApi('/badges');
+      return callApi('/badgesPractice');
     },
     create(badge) {
       //throw new Error('500: Server error');
-      return callApi(`/badges`, {
+      return callApi(`/badgesPractice`, {
         method: 'POST',
         body: JSON.stringify(badge),
       });
     },
     read(badgeId) {
-      return callApi(`/badges/${badgeId}`);
+      return callApi(`/badgesPractice/${badgeId}`);
     },
     update(badgeId, updates) {
-      return callApi(`/badges/${badgeId}`, {
+      return callApi(`/badgesPractice/${badgeId}`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
     remove(badgeId) {
-      return callApi(`/badges/${badgeId}`, {
+      return callApi(`/badgesPractice/${badgeId}`, {
         method: 'DELETE',
       });
     },
