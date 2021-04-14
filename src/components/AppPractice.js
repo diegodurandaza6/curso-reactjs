@@ -6,7 +6,7 @@ import BadgeEditPractice from '../pages/BadgeEditPractice';
 import BadgesPractice from '../pages/BadgesPractice';
 import NotFoundPractice from '../pages/NotFoundPractice'
 import HomePractice from '../pages/HomePractice'
-import BadgeDetailsPractice from '../pages/BadgeDetailsPractice'
+import BadgeDetailsPractice from '../pages/BadgeDetailsContainerPractice'
 
 function AppPractice(){
     return(
