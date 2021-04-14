@@ -6,6 +6,7 @@ import BadgeEditPractice from '../pages/BadgeEditPractice';
 import BadgesPractice from '../pages/BadgesPractice';
 import NotFoundPractice from '../pages/NotFoundPractice'
 import HomePractice from '../pages/HomePractice'
+import BadgeDetailsPractice from '../pages/BadgeDetailsPractice'
 
 function AppPractice(){
     return(
@@ -16,6 +17,7 @@ function AppPractice(){
                     <Route exact path="/badgesPractice" component={BadgesPractice} />
                     <Route exact path="/badgesPractice/new" component={BadgeNewPractice} />
                     <Route exact path="/badgesPractice/:badgeId/edit" component={BadgeEditPractice} />
+                    <Route exact path="/badgesPractice/:badgeId" component={BadgeDetailsPractice} />
                     <Route component={NotFoundPractice}/>
                 </Switch>
             </LayoutPractice>
