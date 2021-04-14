@@ -7,6 +7,7 @@ import BadgesListPractice from '../components/BadgesListPractice'
 import api from '../api'
 import PageLoadingPractice from '../components/PageLoadingPractice'
 import PageError from '../components/PageError'
+import MiniLoader from '../components/MiniLoader';
 
 class BadgesPractice extends React.Component {
 
@@ -44,6 +45,13 @@ class BadgesPractice extends React.Component {
     componentDidMount(){
         // console.log('3. componentDidMount()');
         this.fetchData()
+        this.intervalId = setInterval(() => {
+            this.fetchData();
+        }, 5000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.intervalId);
     }
 
     fetchData = async () => {
@@ -58,7 +66,7 @@ class BadgesPractice extends React.Component {
     }
     
     render(){
-        if(this.state.loading){
+        if(this.state.loading && !this.state.data){
             return(<PageLoadingPractice/>);
         }
 
@@ -86,6 +94,7 @@ class BadgesPractice extends React.Component {
                             <BadgesListPractice badges={this.state.data} />
                         </div>
                     </div>
+                    {this.state.loading && <MiniLoader/>}
                 </div>
             </React.Fragment>
         )
