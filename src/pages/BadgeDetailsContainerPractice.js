@@ -47,7 +47,7 @@ class BadgeDetailsContainerPractice extends React.Component {
         try {
             await api.badges.remove(this.props.match.params.badgeId);
             this.setState({ loading: false });
-            this.props.history.push('/badges');
+            this.props.history.push('/badgesPractice');
         } catch (error) {
             this.setState({ loading: false, error: error });
         }
